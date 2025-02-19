@@ -478,7 +478,18 @@
     }
 
     function onDateSelected(event) {
-        $_from = event.detail.from;
+
+        switch(event.detail.unit) {
+            case 'day':
+                $_from = new Date(event.detail.from).setHours(0);
+                break;
+            case 'hour':
+                $_from = new Date(event.detail.from).setMinutes(0);
+                break;
+            default:
+                $_from = event.detail.from;
+        }
+
         $_to = event.detail.to;
         api['gantt'].raise.dateSelected({ from: $_from, to: $_to });
     }
