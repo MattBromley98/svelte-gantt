@@ -1,7 +1,7 @@
 {
     "name": "svelte-gantt-monorepo",
     "description": "monorepo for svelte-gantt",
-    "private": true,
+    "private": false,
     "version": "0.0.1",
     "author": "Ante Novokmet <ante.je.zakon@gmail.com>",
     "type": "module",
